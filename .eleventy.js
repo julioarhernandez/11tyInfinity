@@ -36,11 +36,6 @@ module.exports = function (eleventyConfig) {
         .addPassthroughCopy("admin")
         .addLayoutAlias('default', 'layouts/default.njk');
 
-    eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-
-
-    
     return {
         passthroughFileCopy: true,
         markdownTemplateEngine: "njk",

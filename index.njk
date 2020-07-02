@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-twelve">
                     <h3 class="animate-intro">{{ home.header.subtitle }}</h3>
-                    <h1 class="animate-intro">{{ home.header.title }}</h1>
+                    <h1 class="animate-intro">{{ home.header.title | safe }}</h1>
                     <div class="more animate-intro">
                         <a class="smoothscroll button stroke" href="{{ home.header.button.href }}">
                             {{ home.header.button.text }}
@@ -85,12 +85,12 @@
                     {% if service.fa == 'true' %}
                         <i class="{{ service.icon }}"></i>
                     {% else %}
-                        <img src="{{ service.image }}{% if service.resize != '' %}-/resize/{{ service.resize }}/{% endif %}" class="service_icon" alt="{{ service.title }}"/>
+                        <img src="{{ service.image }}" class="service_icon" alt="{{ service.title }}"/>
                     {% endif %}
                 </span>
                 <div class="service-content">
                     <h3 class="h05">{{ service.title }}</h3>
-                    {{ service.content }}
+                    {{ service.content | safe }}
                 </div>
 
             </div> <!-- end bgrid -->
@@ -203,7 +203,7 @@
 
             <div class="client-lists owl-carousel">
                 {% for item in home.clients %}
-                    <div><img src="{{ item.src }}{% if item.resize != '' %}-/resize/{{ item.resize }}/{% endif %}" alt="{{ item.alt }}"></div>
+                    <div><img src="{{ item.src }}" alt="{{ item.alt }}"></div>
                 {% endfor %}
             </div>
 
@@ -215,7 +215,7 @@
 
 <!-- contact
 ================================================== -->
-<section id="contact" style="background-image: url({{ home.contact.background-image }});">
+<section id="contact" style="background-image: url({{ home.contact.backgroundImage }});">
 
     <div class="overlay"></div>
 
@@ -293,21 +293,21 @@
             <div class="cinfo">
                 <h6>{{ home.contact.information.subtitle }}</h6>
                 <p>
-                    {{ home.contact.information.address }}
+                    {{ home.contact.information.address | safe}}
                 </p>
             </div> <!-- end cinfo -->
 
             <div class="cinfo">
                 <h6>{{ home.contact.information.emailTitle }}</h6>
                 <p>
-                    {{ home.contact.information.emails }}
+                    {{ home.contact.information.emails | safe }}
                 </p>
             </div> <!-- end cinfo -->
 
             <div class="cinfo">
                 <h6>{{ home.contact.information.phoneTitle }}</h6>
                 <p>
-                    {{ home.contact.information.phones }}
+                    {{ home.contact.information.phones | safe }}
                 </p>
             </div>
 
