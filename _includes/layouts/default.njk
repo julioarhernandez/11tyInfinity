@@ -10,8 +10,8 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>{{ site.data.home.home.seo.title}}</title>
-	<meta name="description" content="{{ site.data.home.home.seo.description}}">  
+	<title>{{ home.seo.title}}</title>
+	<meta name="description" content="{{ home.seo.description}}">
 	<meta name="author" content="{{ page.author }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.trujillosrepairs.com/" />
@@ -24,11 +24,11 @@
    ================================================== -->
    <style>
     :root {
-        --primary-color: {{ site.data.global.global.colors.primary }};
-        --secondary-color: {{ site.data.global.global.colors.secondary }};
-        --third-color: {{ site.data.global.global.colors.third }};
-        --fourth-color: {{ site.data.global.global.colors.fourth }};
-        --fifth-color: {{ site.data.global.global.colors.fifth }};
+        --primary-color: {{ global.colors.primary }};
+        --secondary-color: {{ global.colors.secondary }};
+        --third-color: {{ global.colors.third }};
+        --fourth-color: {{ global.colors.fourth }};
+        --fifth-color: {{ global.colors.fifth }};
         }
    </style>
    <link rel="stylesheet" href="css/base.css">
@@ -53,7 +53,7 @@
    <header> 
 
         <div class="header-logo">
-           <a href="/">{{site.data.global.global.brand}}</a>
+           <a href="/">{{global.brand}}</a>
         </div> 
     
          <a id="header-menu-trigger" href="#0">
@@ -65,7 +65,7 @@
     
              <a href="#0" class="close-button" title="close"><span>Close</span></a>	
     
-            <h3>{{site.data.global.global.brand}}</h3>  
+            <h3>{{global.brand}}</h3>
     
              <ul class="nav-list">
                  <li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
@@ -76,7 +76,7 @@
              </ul>			
     
              <ul class="header-social-list">
-            {% for social in site.data.global.global.social %}
+            {% for social in global.social %}
                 <li>
                     <a href="{{ social.href }}"><i class="fa {{ social.icon }}"></i></a>
                 </li>
@@ -96,9 +96,9 @@
 
 	      	<div class="col-five tab-full footer-about">       
 
-	            <h4 class="h05">{{ site.data.footer.footer.brand }}</h4>
+	            <h4 class="h05">{{ footer.brand }}</h4>
 
-	            <p>{{ site.data.footer.footer.content }}</p>	            
+	            <p>{{ footer.content }}</p>
 
 		      </div> <!-- end footer-about -->
 
@@ -107,7 +107,7 @@
 	      		<h4 class="h05">Follow Us.</h4>
 
 	      		<ul class="list-links">
-                    {% for social in site.data.global.global.social %}
+                    {% for social in global.social %}
                     <li>
                         <a href="{{ social.href }}">{{ social.name }}</a>
                     </li>
@@ -118,9 +118,9 @@
 
 	      	<div class="col-four tab-full footer-subscribe end">
 
-	      		<h4 class="h05">{{ site.data.footer.footer.newsletter-title }}</h4>
+	      		<h4 class="h05">{{ footer.newsletterTitle }}</h4>
 
-	      		<p>{{ site.data.footer.footer.newsletter-content }}</p>
+	      		<p>{{ footer.newsletterContent }}</p>
 
 	      		<div class="subscribe-form">
 	      	

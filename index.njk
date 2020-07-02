@@ -4,7 +4,7 @@
 
 <!-- home
 ================================================== -->
-<section id="home" style="background-image: url({{ site.data.home.home.header.background-image }});">
+<section id="home" style="background-image: url({{ home.header.backgroundImage }});">
 
     <div class="overlay"></div>
 
@@ -12,11 +12,11 @@
         <div class="home-content-tablecell">
             <div class="row">
                 <div class="col-twelve">
-                    <h3 class="animate-intro">{{ site.data.home.home.header.subtitle }}</h3>
-                    <h1 class="animate-intro">{{ site.data.home.home.header.title }}</h1>
+                    <h3 class="animate-intro">{{ home.header.subtitle }}</h3>
+                    <h1 class="animate-intro">{{ home.header.title }}</h1>
                     <div class="more animate-intro">
-                        <a class="smoothscroll button stroke" href="{{ site.data.home.home.header.button.href }}">
-                            {{ site.data.home.home.header.button.text }}
+                        <a class="smoothscroll button stroke" href="{{ home.header.button.href }}">
+                            {{ home.header.button.text }}
                         </a>
                     </div>
                 </div> <!-- end col-twelve -->
@@ -25,7 +25,7 @@
     </div> <!-- end home-content-table -->
 
     <ul class="home-social-list">
-        {% for social in site.data.global.global.social %}
+        {% for social in global.social %}
         <li class="animate-intro">
             <a href="{{ social.href }}"><i class="fa {{ social.icon }}"></i></a>
         </li>
@@ -52,8 +52,8 @@
             <div class="about-profile-bg"></div>
 
             <div class="intro">
-                <h3 class="animate-this">{{site.data.home.home.about.title }}</h3>
-                <p class="lead animate-this">{{site.data.home.home.about.content }}</p>
+                <h3 class="animate-this">{{home.about.title }}</h3>
+                <p class="lead animate-this">{{home.about.content }}</p>
             </div>
 
         </div> <!-- end col-full  -->
@@ -64,22 +64,22 @@
 
 <!-- about
 ================================================== -->
-<section id="services" style="background-image: url({{ site.data.home.home.services.background-image }});" >
+<section id="services" style="background-image: url({{ home.services.backgroundImage }});" >
 
     <div class="overlay"></div>
     <div class="gradient-overlay"></div>
 
     <div class="row narrow section-intro with-bottom-sep animate-this">
         <div class="col-full">
-            <h3>{{site.data.home.home.services.subtitle }}</h3>
-            <h1>{{site.data.home.home.services.title }}</h1>
-            <p class="lead">{{ site.data.home.home.services.content }}</p>
+            <h3>{{home.services.subtitle }}</h3>
+            <h1>{{home.services.title }}</h1>
+            <p class="lead">{{ home.services.content }}</p>
         </div> <!-- end col-full -->
     </div> <!-- end row -->
 
     <div class="row services-content">
         <div class="services-list block-1-2 block-tab-full group">
-            {% for service in site.data.home.home.services.items %}
+            {% for service in home.services.items %}
             <div class="bgrid service-item animate-this">
                 <span class="icon">
                     {% if service.fa == 'true' %}
@@ -111,9 +111,9 @@
 
 <!--        <div class="row narrow section-intro with-bottom-sep animate-this">-->
 <!--            <div class="col-twelve">-->
-<!--                <h3>{{site.data.home.home.portfolio.subtitle }}</h3>-->
-<!--                <h1>{{site.data.home.home.portfolio.title }}</h1>-->
-<!--                <p class="lead">{{ site.data.home.home.portfolio.content }}</p>-->
+<!--                <h3>{{home.portfolio.subtitle }}</h3>-->
+<!--                <h1>{{home.portfolio.title }}</h1>-->
+<!--                <p class="lead">{{ home.portfolio.content }}</p>-->
 <!--            </div>-->
 <!--        </div> &lt;!&ndash; end row section-intro &ndash;&gt;-->
 
@@ -122,7 +122,7 @@
 <!--    <div class="row portfolio-content">-->
 <!--        <div class="col-twelve">-->
 <!--            <div id="folio-wrap" class="bricks-wrapper">-->
-<!--				{% for items in site.data.home.home.portfolio.items %}-->
+<!--				{% for items in home.portfolio.items %}-->
 <!--                <div class="brick folio-item">-->
 <!--                    <div class="item-wrap animate-this" data-src="{{items.src}}"-->
 <!--                        data-sub-html="#id{{forloop.index}}">-->
@@ -161,7 +161,7 @@
 
     <div class="row">
         <div class="col-twelve">
-            <h2 class="animate-this">{{ site.data.home.home.testimonials.title }}</h2>
+            <h2 class="animate-this">{{ home.testimonials.title }}</h2>
         </div>
     </div>
 
@@ -170,7 +170,7 @@
         <div id="testimonial-slider" class="flex-slider animate-this">
 
             <ul class="slides">
-				{% for item in site.data.home.home.testimonials.items %}
+				{% for item in home.testimonials.items %}
                 <li>
                     <p>
                         {{ item.content }}
@@ -202,7 +202,7 @@
         <div class="col-twelve">
 
             <div class="client-lists owl-carousel">
-                {% for item in site.data.home.home.clients %}
+                {% for item in home.clients %}
                     <div><img src="{{ item.src }}{% if item.resize != '' %}-/resize/{{ item.resize }}/{% endif %}" alt="{{ item.alt }}"></div>
                 {% endfor %}
             </div>
@@ -215,16 +215,16 @@
 
 <!-- contact
 ================================================== -->
-<section id="contact" style="background-image: url({{ site.data.home.home.contact.background-image }});">
+<section id="contact" style="background-image: url({{ home.contact.background-image }});">
 
     <div class="overlay"></div>
 
     <div class="row narrow section-intro with-bottom-sep animate-this">
         <div class="col-twelve">
-            <h3>{{ site.data.home.home.contact.subtitle }}</h3>
-            <h1>{{ site.data.home.home.contact.title }}</h1>
+            <h3>{{ home.contact.subtitle }}</h3>
+            <h1>{{ home.contact.title }}</h1>
 
-            <p class="lead">{{ site.data.home.home.contact.content }}</p>
+            <p class="lead">{{ home.contact.content }}</p>
         </div>
     </div> <!-- end section-intro -->
 
@@ -232,10 +232,10 @@
 
         <div class="col-seven tab-full animate-this">
 
-            <h5>{{ site.data.home.home.contact.action-title }}</h5>
+            <h5>{{ home.contact.actionTitle }}</h5>
 
             <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="{{ site.data.home.home.contact.form.action }}">
+            <form name="contactForm" id="contactForm" method="post" action="{{ home.contact.form.action }}">
                 <input type="text" name="_gotcha" style="display:none" />
                 <div class="form-field">
                     <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2"
@@ -288,26 +288,26 @@
 
         <div class="col-four tab-full contact-info end animate-this">
 
-            <h5>{{ site.data.home.home.contact.information.title }}</h5>
+            <h5>{{ home.contact.information.title }}</h5>
 
             <div class="cinfo">
-                <h6>{{ site.data.home.home.contact.information.subtitle }}</h6>
+                <h6>{{ home.contact.information.subtitle }}</h6>
                 <p>
-                    {{ site.data.home.home.contact.information.address }}
+                    {{ home.contact.information.address }}
                 </p>
             </div> <!-- end cinfo -->
 
             <div class="cinfo">
-                <h6>{{ site.data.home.home.contact.information.email-title }}</h6>
+                <h6>{{ home.contact.information.emailTitle }}</h6>
                 <p>
-                    {{ site.data.home.home.contact.information.emails }}
+                    {{ home.contact.information.emails }}
                 </p>
             </div> <!-- end cinfo -->
 
             <div class="cinfo">
-                <h6>{{ site.data.home.home.contact.information.phone-title }}</h6>
+                <h6>{{ home.contact.information.phoneTitle }}</h6>
                 <p>
-                    {{ site.data.home.home.contact.information.phones }}
+                    {{ home.contact.information.phones }}
                 </p>
             </div>
 

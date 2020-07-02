@@ -1,12 +1,12 @@
-<nav class="navbar navbar-expand-lg {{site.data.navigation.global-en.class}}{%if site.data.navigation.global-en.fixed %} fixed-top{% endif %}{%if site.data.navigation.global-en.absolute %} navbar-absolute{% endif %}{%if site.data.navigation.global-en.sticky %} sticky-top{% endif %}{%if site.data.navigation.global-en.transparent%} navbar-transparent{% endif %} {{site.data.navigation.global-en.background-color}}" data-spy="affix" data-offset-top="60">
+<nav class="navbar navbar-expand-lg {{global-en.class}}{%if global-en.fixed %} fixed-top{% endif %}{%if global-en.absolute %} navbar-absolute{% endif %}{%if global-en.sticky %} sticky-top{% endif %}{%if global-en.transparent%} navbar-transparent{% endif %} {{global-en.background-color}}" data-spy="affix" data-offset-top="60">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="{{site.data.navigation.global-en.navbrand.src}}">
-                {%if site.data.navigation.global-en.navbrand.src %}
-                <img src="{{site.data.navigation.global-en.navbrand.src}}" alt="{{site.data.navigation.global-en.navbrand.alt}}">
+            <a class="navbar-brand" href="{{global-en.navbrand.src}}">
+                {%if global-en.navbrand.src %}
+                <img src="{{global-en.navbrand.src}}" alt="{{global-en.navbrand.alt}}">
                 {% endif %}
-                {%if site.data.navigation.global-en.navbrand.text %}
-                {{site.data.navigation.global-en.navbrand.text}}
+                {%if global-en.navbrand.text %}
+                {{global-en.navbrand.text}}
                 {% endif %}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="collapsibleMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,8 +19,8 @@
             <div class="navbar-header d-lg-none p-4 pt-5 position-relative text-uppercase">
                 Navigate to
             </div>
-            <ul class="navbar-nav {%if site.data.navigation.global-en.navlink-align == 'center' %}mx-auto{% endif %}{%if site.data.navigation.global-en.navlink-align == 'right'%}ml-auto{% endif %}">
-                {% for nav in site.data.navigation.global-en.navlinks %}
+            <ul class="navbar-nav {%if global-en.navlink-align == 'center' %}mx-auto{% endif %}{%if global-en.navlink-align == 'right'%}ml-auto{% endif %}">
+                {% for nav in global-en.navlinks %}
                 {% unless nav.subitems %}
                 <li class="nav-item">
                     <a class="nav-link" data-js="scroll" href="{{ nav.href }}">
@@ -45,7 +45,7 @@
                 {% endif %}
                 {% endfor %}
                 <li class="nav-item">
-                    {%- for item in site.data.navigation.global-en.navlinks -%}
+                    {%- for item in global-en.navlinks -%}
                     {%- if page.url == item.href -%}
                         <a class="nav-link" href="{{ item.switch }}">Spanish</a>
                     {%- elsif item.subitems -%}
@@ -58,7 +58,7 @@
                     {%- endfor -%}
                 </li>
             </ul>
-            {% if site.data.navigation.global-en.showsocial %}
+            {% if global-en.showsocial %}
             <ul class="nav navbar-nav navbar-social">
                 {% for social in site.social %}
                 <li class="nav-item">

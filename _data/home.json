@@ -4,7 +4,7 @@
     "title": "Repair Auto Body Shop | Miami auto body shop repair services"
   },
   "header": {
-    "background-image": "images/hero-bg.jpg",
+    "backgroundImage": "images/hero-bg.jpg",
     "button": {
       "href": "#about",
       "text": "Learn More"
@@ -17,7 +17,7 @@
     "title": "about us"
   },
   "services": {
-    "background-image": "https://ucarecdn.com/029f997e-105e-4eff-9603-bb91a84cf686/",
+    "backgroundImage": "https://ucarecdn.com/029f997e-105e-4eff-9603-bb91a84cf686/",
     "content": "We can take care of anything from frame straightening, to scratch and dent removal, to window replacement, to a fresh coat of paint or complete vehicle restoration. With us, you can rest assured that your car, truck, SUV, van, boat or Jetski is in good hands. ",
     "items": [
       {
@@ -176,17 +176,17 @@
     }
   ],
   "contact": {
-    "action-title": "Send Us A Message",
-    "background-image": "https://ucarecdn.com/ead6d3d2-cc4b-4d18-b474-69ef7cba01b4/",
+    "actionTitle": "Send Us A Message",
+    "backgroundImage": "https://ucarecdn.com/ead6d3d2-cc4b-4d18-b474-69ef7cba01b4/",
     "content": "Please let us know if you have any questions about our services, or a comment you’d like to share. Fill out and submit the form below and a member of our team will be in touch!",
     "form": {
       "action": "https://formspree.io/rafael@trujillosrepairs.com"
     },
     "information": {
       "address": "7056 SW 4TH ST<br> MIAMI, FL 33144",
-      "email-title": "Email Us At",
+      "emailTitle": "Email Us At",
       "emails": "rafael@trujillosrepairs.com<br> leidy@trujillosrepairs.com",
-      "phone-title": "Call Us At",
+      "phoneTitle": "Call Us At",
       "phones": "In english: (786) 603 4422<br> En español: (786) 327 8732",
       "subtitle": "Where to Find Us",
       "title": "Contact Information"
