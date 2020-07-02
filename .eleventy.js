@@ -1,4 +1,3 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
@@ -30,10 +29,10 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig
-        .addPassthroughCopy("_includes/assets/js")
-        .addPassthroughCopy("_includes/assets/css")
-        .addPassthroughCopy("_includes/assets/fonts")
-        .addPassthroughCopy("_includes/assets/images")
+        .addPassthroughCopy("assets/js")
+        .addPassthroughCopy("assets/css")
+        .addPassthroughCopy("assets/fonts")
+        .addPassthroughCopy("assets/images")
         .addPassthroughCopy("admin")
         .addLayoutAlias('default', 'layouts/default.njk');
 
