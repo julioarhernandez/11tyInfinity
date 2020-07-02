@@ -10,9 +10,20 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
-    CMS.registerPreviewStyle("./assets/css/base.css");
-    CMS.registerPreviewStyle("./assets/css/vendor.css");
-    CMS.registerPreviewStyle("./assets/css/main.css");
+    CMS.registerPreviewStyle("../assets/css/base.css");
+    CMS.registerPreviewStyle("../assets/css/vendor.css");
+    CMS.registerPreviewStyle("../assets/css/main.css");
+
+  var PostPreview = createClass({
+    render: function() {
+      var entry = this.props.entry;
+      return h('div', {},
+        h('h1', {}, entry.getIn(['data', 'title'])),
+      );
+    }
+  });
+
+  CMS.registerPreviewTemplate("home", PostPreview);
   </script>
 </body>
 </html>

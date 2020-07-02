@@ -7,7 +7,7 @@ public_folder: "/assets/images"
 
 collections: # A list of collections the CMS should be able to edit
   - label: "Pages"
-    name: "home"
+    name: "Homepage"
     format: "json"
     files:
       - label: "Global"
