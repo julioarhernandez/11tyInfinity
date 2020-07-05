@@ -1,5 +1,6 @@
 ---
     layout: default
+    author: admin
 ---
 
 <!-- home
@@ -102,58 +103,103 @@
 
 </section> <!-- end services -->
 
+<!-- Mission/vision
+================================================== -->
+<section id="mission" style="background-image: url({{ home.mission.backgroundImage }});" >
+
+    <div class="overlay"></div>
+    <div class="gradient-overlay"></div>
+
+    <div class="row section-intro with-bottom-sep animate-this">
+        <div class="col-full">
+            <h3>{{home.mission.subtitle }}</h3>
+            <h1>{{home.mission.title }}</h1>
+            <p class="lead">{{ home.mission.content }}</p>
+        </div> <!-- end col-full -->
+    </div> <!-- end row -->
+
+    <div class="row mission-content process">
+        <div class="mission-list block-1-2 block-tab-full group">
+            {% for mission in home.mission.items %}
+            <div class="bgrid mission-item animate-this">
+                <div class="item-process__text">
+                    <h4 class="item-title">{{ mission.title }}</h4>
+                    <p>{{ mission.content | safe }}</p>
+                </div>
+            </div> <!-- end bgrid -->
+            {% endfor %}
+
+        </div> <!-- end mission-list -->
+
+    </div> <!-- end mission-content -->
+
+</section> <!-- end mission -->
+
 
 <!-- portfolio
 ================================================== -->
-<!--<section id="portfolio">-->
+<section id="portfolio">
 
-<!--    <div class="intro-wrap">-->
+    <div class="intro-wrap">
 
-<!--        <div class="row narrow section-intro with-bottom-sep animate-this">-->
-<!--            <div class="col-twelve">-->
-<!--                <h3>{{home.portfolio.subtitle }}</h3>-->
-<!--                <h1>{{home.portfolio.title }}</h1>-->
-<!--                <p class="lead">{{ home.portfolio.content }}</p>-->
-<!--            </div>-->
-<!--        </div> &lt;!&ndash; end row section-intro &ndash;&gt;-->
+        <div class="row narrow section-intro with-bottom-sep animate-this">
+            <div class="col-twelve">
+                <h3>{{home.portfolio.subtitle }}</h3>
+                <h1>{{home.portfolio.title }}</h1>
+                <p class="lead">{{ home.portfolio.content }}</p>
+            </div>
+        </div> <!-- end row section-intro -->
 
-<!--    </div> &lt;!&ndash; end intro-wrap &ndash;&gt;-->
+    </div> <!-- end intro-wrap -->
 
-<!--    <div class="row portfolio-content">-->
-<!--        <div class="col-twelve">-->
-<!--            <div id="folio-wrap" class="bricks-wrapper">-->
-<!--				{% for items in home.portfolio.items %}-->
-<!--                <div class="brick folio-item">-->
-<!--                    <div class="item-wrap animate-this" data-src="{{items.src}}"-->
-<!--                        data-sub-html="#id{{forloop.index}}">-->
-<!--                        <a href="#" class="overlay">-->
-<!--                            <img src="{{items.src}}" alt="Skaterboy">-->
-<!--                            <div class="item-text">-->
-<!--                                <span class="folio-types">-->
-<!--									{{items.subtitle}}-->
-<!--                                </span>-->
-<!--                                <h3 class="folio-title">{{items.title}}</h3>-->
-<!--                            </div>-->
-<!--                        </a>-->
-<!--                        {% if items.link != '' %}-->
-<!--                        <a href="{{items.link}}" class='details-link' title="details">-->
-<!--                            <i class="icon-link"></i>-->
-<!--                        </a>-->
-<!--                        {% endif %}-->
-<!--                    </div> &lt;!&ndash; end item-wrap &ndash;&gt;-->
+    <div class="row portfolio-content">
+        <div class="col-twelve">
+            <div id="folio-wrap" class="bricks-wrapper">
+				{% for items in home.portfolio.items %}
+                <div class="brick folio-item">
+                    <div class="item-wrap animate-this" data-src="{{items.src}}"
+                        data-sub-html="#id{{forloop.index}}">
+                        <a href="#" class="overlay">
+                            <img src="{{items.src}}" alt="Skaterboy">
+                            <div class="item-text">
+                                <span class="folio-types">
+									{{items.subtitle}}
+                                </span>
+                                <h3 class="folio-title">{{items.title}}</h3>
+                            </div>
+                        </a>
+                        {% if items.link != '' %}
+                        <a href="{{items.link}}" class='details-link' title="details">
+                            <i class="icon-link"></i>
+                        </a>
+                        {% endif %}
+                    </div> <!-- end item-wrap -->
 
-<!--                    <div id="id{{forloop.index}}" class='hide'>-->
-<!--                        <h4>{{items.title}}</h4>-->
-<!--                        {% if items.content %}<p>{{items.content}} {% if items.link %}<a href="{{items.link}}">Details</a>{% endif %}</p>{% endif %}-->
-<!--                    </div>-->
-<!--                </div> &lt;!&ndash; end folio-item &ndash;&gt;-->
-<!--				{% endfor %}-->
-<!--            </div> &lt;!&ndash; end folio-wrap &ndash;&gt;-->
-<!--        </div> &lt;!&ndash; end twelve &ndash;&gt;-->
-<!--    </div> &lt;!&ndash; end portfolio-content &ndash;&gt;-->
+                    <div id="id{{forloop.index}}" class='hide'>
+                        <h4>{{items.title}}</h4>
+                        {% if items.content %}<p>{{items.content}} {% if items.link %}<a href="{{items.link}}">Details</a>{% endif %}</p>{% endif %}
+                    </div>
+                </div> <!-- end folio-item -->
+				{% endfor %}
+            </div> <!-- end folio-wrap -->
+        </div> <!-- end twelve -->
+    </div> <!-- end portfolio-content -->
 
-<!--</section> &lt;!&ndash; end portfolio &ndash;&gt;-->
+</section> <!-- end portfolio -->
 
+<!-- textContent/vision
+================================================== -->
+<section id="textContent" style="background-image: url({{ home.textContent.backgroundImage }});" >
+    <div class="overlay"></div>
+    <div class="gradient-overlay"></div>
+    <div class="row section-intro animate-this">
+        <div class="col-full">
+            <h3>{{home.textContent.subtitle }}</h3>
+            <h1>{{home.textContent.title }}</h1>
+            <p class="lead">{{ home.textContent.content }}</p>
+        </div> <!-- end col-full -->
+    </div> <!-- end row -->
+</section> <!-- end textContent -->
 
 <!-- Testimonials Section
 ================================================== -->

@@ -115,6 +115,13 @@ a:hover, a:focus {
   color: #000000;
 }
 
+.item-title {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+}
+
 
 /* ===================================================================
  *  03. typography & general theme styles - (_document-setup.scss) 
@@ -2040,6 +2047,383 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   }
 }
 
+/* ===================================================================
+ *  12. mission - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+#mission {
+  background-color: #19191b;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-height: 800px;
+  position: relative;
+  padding: 15rem 0 15rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+#mission .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 5, 0.7);
+}
+#mission .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 );
+}
+#mission .section-intro h3 {
+  color: var(--third-color);
+  opacity: 0.5;
+}
+#mission .section-intro h1 {
+  color: var(--secondary-color);
+}
+#mission .section-intro .lead {
+  color: var(--third-color);
+  opacity: 0.4;
+}
+#mission .mission-content {
+  text-align: left;
+  max-width: 1040px;
+}
+#mission .mission-list {
+  margin-top: 1.2rem;
+  text-align: left;
+}
+#mission .mission-list .mission-item {
+  margin-bottom: 3rem;
+  padding: 0 50px;
+}
+#mission .mission-list .mission-item p {
+  color: var(--third-color);
+  opacity: 0.5;
+}
+#mission .mission-list .icon {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+#mission .mission-list .icon img{
+  width: 7.4rem;
+  height: 7.4rem;
+  margin: 0 auto 1.2rem auto;
+  display: block;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#mission .mission-list .icon i {
+  font-size: 5.4rem;
+  color: var(--primary-color);
+}
+#mission .mission-list .h05 {
+  font-size: 1.7rem;
+  line-height: 1.765;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * mission
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+  #mission .mission-list .mission-item {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #mission .mission-list .mission-item {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #mission {
+    padding: 12rem 0 12rem;
+  }
+  #mission .mission-content {
+    max-width: 550px;
+  }
+  #mission .mission-list .mission-item {
+    padding: 0 15px;
+  }
+  #mission .mission-list .icon i {
+    font-size: 5.1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #mission .mission-list .mission-item {
+    padding: 0 10px;
+  }
+  #mission .mission-list .icon i {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #mission .mission-list .mission-item {
+    padding: 0;
+  }
+}
+
+
+/* ===================================================================
+ *  12. textContent - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+#textContent {
+  background-color: #19191b;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-height: 800px;
+  position: relative;
+  padding: 15rem 0 15rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+#textContent .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 5, 5, 0.7);
+}
+#textContent .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .4;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000',GradientType=0 );
+}
+#textContent .section-intro h3 {
+  color: var(--third-color);
+  opacity: 0.5;
+}
+#textContent .section-intro h1 {
+  color: var(--secondary-color);
+}
+#textContent .section-intro .lead {
+  color: var(--third-color);
+  opacity: 0.4;
+}
+#textContent .textContent-content {
+  text-align: left;
+  max-width: 1040px;
+}
+#textContent .textContent-list {
+  margin-top: 1.2rem;
+  text-align: left;
+}
+#textContent .textContent-list .textContent-item {
+  margin-bottom: 3rem;
+  padding: 0 50px;
+}
+#textContent .textContent-list .textContent-item p {
+  color: var(--third-color);
+  opacity: 0.5;
+}
+#textContent .textContent-list .icon {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+#textContent .textContent-list .icon img{
+  width: 7.4rem;
+  height: 7.4rem;
+  margin: 0 auto 1.2rem auto;
+  display: block;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#textContent .textContent-list .icon i {
+  font-size: 5.4rem;
+  color: var(--primary-color);
+}
+#textContent .textContent-list .h05 {
+  font-size: 1.7rem;
+  line-height: 1.765;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * textContent
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+  #textContent .textContent-list .textContent-item {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #textContent .textContent-list .textContent-item {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #textContent {
+    padding: 12rem 0 12rem;
+  }
+  #textContent .textContent-content {
+    max-width: 550px;
+  }
+  #textContent .textContent-list .textContent-item {
+    padding: 0 15px;
+  }
+  #textContent .textContent-list .icon i {
+    font-size: 5.1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #textContent .textContent-list .textContent-item {
+    padding: 0 10px;
+  }
+  #textContent .textContent-list .icon i {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #textContent .textContent-list .textContent-item {
+    padding: 0;
+  }
+}
+
+
+/* -------------------------------------------------------------------
+ * ## process
+ * ------------------------------------------------------------------- */
+.process {
+  margin-top: 6.6rem;
+  counter-reset: ctr;
+}
+
+.process h4 {
+  padding-left: 7rem;
+  margin-bottom: 2.1rem;
+  position: relative;
+  color: var(--secondary-color);
+}
+
+.process h4::before {
+  content: counter(ctr);
+  counter-increment: ctr;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: var(--primary-color);
+  height: 48px;
+  width: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.item-process {
+  position: relative;
+  min-height: 24.6rem;
+  margin-bottom: 3rem;
+}
+
+.item-process:nth-child(2n+1) {
+  padding-right: 30px;
+}
+
+.item-process:nth-child(2n+2) {
+  padding-left: 30px;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * process
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width:1000px) {
+  .item-process:nth-child(2n+1) {
+    padding-right: 25px;
+  }
+
+  .item-process:nth-child(2n+2) {
+    padding-left: 25px;
+  }
+
+}
+
+@media only screen and (max-width:1000px) {
+  .s-about {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
+  .item-process:nth-child(n) {
+    padding: 0 15px;
+    min-height: 0;
+  }
+
+}
+
+@media only screen and (max-width:600px) {
+  .s-about {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  .process h4 {
+    padding-left: 6rem;
+  }
+
+  .process h4::before {
+    font-size: 1.8rem;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    top: -4px;
+  }
+
+  .item-process:nth-child(n) {
+    padding: 0 10px;
+  }
+
+}
+
+@media only screen and (max-width:400px) {
+  .process h4 {
+    padding-left: 5.8rem;
+  }
+
+  .process h4::before {
+    font-size: 1.6rem;
+    height: 39px;
+    width: 39px;
+    line-height: 39px;
+    top: -5px;
+  }
+
+  .item-process:nth-child(n) {
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+}
 
 /* ===================================================================
  *  13. portfolio - (_layout.scss)
