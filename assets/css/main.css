@@ -1974,6 +1974,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   margin-top: 1.2rem;
   text-align: center;
 }
+#services.-left .services-list {
+  text-align: left;
+}
 #services .services-list .service-item {
   margin-bottom: 3rem;
   padding: 0 50px;

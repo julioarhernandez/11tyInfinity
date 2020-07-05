@@ -65,7 +65,7 @@
 
 <!-- about
 ================================================== -->
-<section id="services" style="background-image: url({{ home.services.backgroundImage }});" >
+<section id="services" {% if home.services.className %}class="{{ home.services.className }}"{% endif %} style="background-image: url({{ home.services.backgroundImage }});" >
 
     <div class="overlay"></div>
     <div class="gradient-overlay"></div>

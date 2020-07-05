@@ -17,6 +17,7 @@
     "title": "about us"
   },
   "services": {
+    "className": "-left",
     "backgroundImage": "./assets/images/services-bg.jpg",
     "content": "We can take care of anything from frame straightening, to scratch and dent removal, to window replacement, to a fresh coat of paint or complete vehicle restoration. With us, you can rest assured that your car, truck, SUV, van, boat or Jetski is in good hands. ",
     "items": [
