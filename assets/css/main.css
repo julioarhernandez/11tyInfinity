@@ -2262,6 +2262,9 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   #accordion {
     padding: 12rem 0 12rem;
   }
+  .accordion-item{
+    padding: 0;
+  }
 }
 
 @media screen and (max-width:600px) {
