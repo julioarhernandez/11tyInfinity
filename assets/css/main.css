@@ -62,6 +62,7 @@
 
 
 
+
 /* ===================================================================
  *  02. base style overrides - (_document-setup)
  *
@@ -97,6 +98,13 @@ body {
   color: #353535;
   margin: 0;
   padding: 0;
+}
+
+.-light{
+  background-color: var(--secondary-color);
+}
+.-dark{
+  background-color: var(--fifth-color);
 }
 
 /* ------------------------------------------------------------------- 
@@ -2049,6 +2057,242 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
     padding: 0;
   }
 }
+
+/* ------------------------------------------------------------------- 
+ * ## accordion list
+ * ------------------------------------------------------------------- */
+#accordion{
+  padding: 15rem 0 15rem;
+}
+#accordion.-invert .section-intro h1{
+  color: var(--secondary-color);
+}
+#accordion .section-intro{
+  text-align: left;
+}
+#accordion.-light .section-intro h3{
+    color: var(--primary-color);
+}
+#accordion.-dark .section-intro h3,
+#accordion.-invert .section-intro h3 {
+    color: var(--third-color);
+    opacity: 0.5;
+}
+
+.accordion-list {
+  list-style: none;
+  padding-left: 20px;
+  margin: 8.8rem 0 0 0;
+  counter-reset: ctr;
+}
+#accordion.-dark .accordion-list h5,
+#accordion.-invert .accordion-list h5 {
+  color: var(--secondary-color);
+}
+
+.accordion-list__item {
+  border-top: 1px solid var(--third-color);
+  padding-left: 0;
+}
+
+.accordion-list__item:last-child {
+  border-bottom: 1px solid var(--third-color);
+}
+
+#accordion.-invert .accordion-list__item,
+#accordion.-dark .accordion-list__item{
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+#accordion.-invert .accordion-list__item:last-child,
+#accordion.-dark .accordion-list__item:last-child{
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.accordion-list__item-header {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  padding-right: 6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-list__item-header h5 {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  padding-left: 1.111em;
+  margin: 0;
+  position: relative;
+}
+
+.accordion-list__item-header h5::before {
+  content: counter(ctr, decimal-leading-zero) ".";
+  counter-increment: ctr;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: .5em;
+  line-height: 1;
+  color: var(--primary-color);
+  position: absolute;
+  top: .5em;
+  left: 0;
+}
+
+#accordion.-light .accordion-list__item-header::after,
+#accordion .accordion-list__item-header::after {
+  border-bottom: 2px solid var(--fifth-color);
+  border-right: 2px solid var(--fifth-color);
+  content: '';
+  display: block;
+  height: 6px;
+  width: 6px;
+  margin-top: -6px;
+  pointer-events: none;
+  position: absolute;
+  right: 2.4rem;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#accordion.-dark .accordion-list__item-header::after,
+#accordion.-invert .accordion-list__item-header::after {
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  content: '';
+  display: block;
+  height: 6px;
+  width: 6px;
+  margin-top: -6px;
+  pointer-events: none;
+  position: absolute;
+  right: 2.4rem;
+  top: 50%;
+  -webkit-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transition: all, .3s;
+  transition: all, .3s;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.accordion-list__item-body {
+  padding-top: 1.2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: none;
+}
+
+.is-active .accordion-list__item-header::after {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.is-active .accordion-list__item-body {
+  display: block;
+}
+
+.accordion-item{
+    margin-bottom: 3rem;
+    padding: 0 50px;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * accordion
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1200px) {
+  .accordion-list {
+    padding-left: 10px;
+  }
+
+}
+
+@media screen and (max-width:1040px) {
+  .s-accordion .vert-line {
+    height: 12rem;
+    left: 16px;
+  }
+
+  .s-accordion__content .column {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /*.s-accordion__content .s-accordion__leftcol {*/
+  /*  -ms-flex: 0 0 75%;*/
+  /*  -webkit-box-flex: 0;*/
+  /*  flex: 0 0 75%;*/
+  /*  max-width: 75%;*/
+  /*  padding-bottom: 0;*/
+  /*}*/
+
+  .s-accordion__content .s-accordion__leftcol p.lead {
+    max-width: none;
+  }
+
+  .accordion-list {
+    padding-left: 0;
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .s-accordion {
+    padding-top: 20rem;
+  }
+
+  .s-accordion__content .s-accordion__leftcol {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  #accordion {
+    padding: 12rem 0 12rem;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .s-accordion .vert-line {
+    left: 34px;
+  }
+
+  .accordion-list__item-header h5 {
+    font-size: 3.2rem;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  .accordion-list__item-header h5 {
+    font-size: 3rem;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .s-accordion .vert-line {
+    left: 24px;
+  }
+
+  .accordion-list__item-header h5 {
+    font-size: 2.8rem;
+  }
+
+}
+
 
 /* ===================================================================
  *  12. mission - (_layout.scss)

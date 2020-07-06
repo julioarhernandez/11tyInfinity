@@ -129,6 +129,32 @@
 		});
 
 	};
+
+   /* accordion
+    * ------------------------------------------------------ */
+    const ssAccordion = function() {
+
+        const $allItems = $('.accordion-list__item');
+        const $allPanels = $allItems.children('.accordion-list__item-body');
+
+        $allPanels.slice(1).hide();
+
+        $allItems.on('click', '.accordion-list__item-header', function() {
+
+            const $this = $(this),
+                  $curItem = $this.parent(),
+                  $curPanel =  $this.next();
+
+            if(!$curItem.hasClass('is-active')){
+                $allPanels.slideUp();
+                $curPanel.slideDown();
+                $allItems.removeClass('is-active');
+                $curItem.addClass('is-active');
+            }
+
+            return false;
+        });
+    };
   	
 
 
@@ -413,6 +439,7 @@
 		ssFlexSlider();
 		ssOwlCarousel();
 		ssMenuOnScrolldown();
+		ssAccordion();
 		ssOffCanvas();
 		ssSmoothScroll();
 		ssPlaceholder();
