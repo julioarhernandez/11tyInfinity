@@ -2681,6 +2681,7 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
   min-height: 800px;
   position: relative;
   padding: 0;
+  padding-bottom: 12rem;
 }
 #portfolio .intro-wrap {
   padding: 15rem 0 21rem;
